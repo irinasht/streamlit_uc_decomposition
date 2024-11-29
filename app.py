@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-df = pd.read_csv('/Users/irinasht/Desktop/рабочие файлы/streamlit_uc_decomposition/export - 2024-11-29T152136.430.csv')
+df = pd.read_csv('export - 2024-11-29T152136.430.csv')
 
 df = df.loc[df.iteration.isin(['total_by_price_group','total'])]
 
