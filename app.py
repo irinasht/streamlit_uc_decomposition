@@ -2,9 +2,12 @@ import pandas as pd
 import streamlit as st
 import matplotlib.pyplot as plt
 import numpy as np
+from datetime import datetime, timedelta
 
 
-df = pd.read_csv('export - 2024-11-29T152136.430.csv')
+today = pd.to_datetime(datetime.today()).date()
+
+df = pd.read_csv(f'uc_decomposition_{today}.csv')
 
 df = df.loc[df.iteration.isin(['total_by_price_group','total'])]
 
